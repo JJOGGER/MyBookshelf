@@ -31,9 +31,15 @@ public class BookChapterBean implements Cloneable, BaseChapterBean {
     public BookChapterBean() {
     }
 
+    public BookChapterBean(String tag, String durChapterName, String durChapterUrl) {
+        this.tag = tag;
+        this.durChapterName = durChapterName;
+        this.durChapterUrl = durChapterUrl;
+    }
+
     @Generated(hash = 304828234)
-    public BookChapterBean(String tag, String noteUrl, int durChapterIndex, String durChapterUrl, String durChapterName,
-                           Long start, Long end) {
+    public BookChapterBean(String tag, String noteUrl, int durChapterIndex, String durChapterUrl,
+            String durChapterName, Long start, Long end) {
         this.tag = tag;
         this.noteUrl = noteUrl;
         this.durChapterIndex = durChapterIndex;
@@ -41,12 +47,6 @@ public class BookChapterBean implements Cloneable, BaseChapterBean {
         this.durChapterName = durChapterName;
         this.start = start;
         this.end = end;
-    }
-
-    public BookChapterBean(String tag, String durChapterName, String durChapterUrl) {
-        this.tag = tag;
-        this.durChapterName = durChapterName;
-        this.durChapterUrl = durChapterUrl;
     }
 
     @Override
